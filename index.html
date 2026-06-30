@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A clean personal portfolio for Aries, featuring projects, skills, and contact links."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Aries | Portfolio</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="Sources/ARS_monogram_transparent_1.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="Sources/ARS_monogram_transparent_1.png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  
+  <body>
+    <header class="site-header on-hero">
+      <a class="brand" href="#home" aria-label="Aries home">
+        <img
+          class="brand-logo brand-logo-dark"
+          src="Sources/ARS_monogram_transparent_1.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="brand-logo brand-logo-light"
+          src="Sources/ARS_monogram_transparent_1_white.png"
+          alt=""
+          aria-hidden="true"
+        />
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span></span>
+        <span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#work">My Projects</a>
+        <a href="#about">About Me</a>
+        <a href="#contact">Contact Me</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <img
+          class="hero-image"
+          src="Sources/ChatGPT Image Jun 30, 2026, 07_50_48 AM.png"
+          alt="Illustrated hero portrait of Aries with web developer text"
+        />
+        <div class="hero-shade" aria-hidden="true"></div>
+
+        <div class="hero-content section-shell">
+          <div class="hero-copy">
+            <p class="eyebrow">HI, I&rsquo;M</p>
+            <h1>Aries Tayao</h1>
+            <p class="hero-text">
+              Practical web apps, built with clarity and creative rhythm.
+            </p>
+            <div class="hero-actions" aria-label="Primary links">
+              <a class="button" href="#work">View Projects</a>
+              <a class="button button-outline" href="#about">About Me</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="section-shell section-block">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2>Projects</h2>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <p class="project-type">Website</p>
+            <h3>Personal portfolio</h3>
+            <p>
+              A responsive portfolio with a custom ARS mark, clean sections,
+              and a simple structure for future projects.
+            </p>
+            <a
+              href="https://github.com/ars1224/Aries-portfolio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View repository
+            </a>
+          </article>
+
+          <article class="project-card">
+            <p class="project-type">Learning</p>
+            <h3>Web practice</h3>
+            <p>
+              Small builds and experiments made while learning layout,
+              interaction, and front-end fundamentals.
+            </p>
+            <a
+              href="https://github.com/ars1224?tab=repositories"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Browse projects
+            </a>
+          </article>
+
+          <article class="project-card">
+            <p class="project-type">Next</p>
+            <h3>More coming soon</h3>
+            <p>
+              This space is ready for new work, case studies, and polished
+              project notes as the portfolio grows.
+            </p>
+            <a href="#contact">Get in touch</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="section-shell section-block about-grid">
+        <div class="section-heading">
+          <p class="eyebrow">About</p>
+          <h2>Curious, practical, always learning.</h2>
+        </div>
+
+        <div class="about-panel">
+          <figure class="about-photo">
+            <img
+              src="Sources/ChatGPT Image Jun 29, 2026, 11_35_29 PM.png"
+              alt="Illustrated portrait of Aries in a workspace"
+            />
+          </figure>
+
+          <div class="about-copy">
+            <p>
+              I'm Aries, a builder focused on learning by making real things. I
+              like clear interfaces, useful details, and projects that teach me
+              something new.
+            </p>
+            <div class="skills-list" aria-label="Skills">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Responsive design</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-shell contact-section">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's connect.</h2>
+        <p>
+          The best place to find me right now is GitHub. Send me an idea, check
+          out the code, or follow along as the work evolves.
+        </p>
+        <a
+          class="button"
+          href="https://github.com/ars1224"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Visit GitHub
+        </a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Aries Portfolio</span>
+      <a href="#home">Back to top</a>
+    </footer>
+  </body>
+</html>
