@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A clean personal portfolio for Aries, featuring projects, skills, and contact links."
+      content="Aries Tayao is a web developer building practical web apps, clean interfaces, and creative digital projects."
     />
-    <meta name="theme-color" content="#ffffff" />
-    <title>Aries | Portfolio</title>
+    <meta name="theme-color" content="#0b0908" />
+    <title>Aries Tayao | Web Developer</title>
     <link
       rel="icon"
       type="image/png"
-      href="Sources/ARS_monogram_transparent_1.png"
+      href="Sources/ARS_monogram_transparent_1_white.png"
     />
     <link
       rel="apple-touch-icon"
@@ -21,13 +21,13 @@
     <link rel="stylesheet" href="css/styles.css" />
     <script src="js/script.js" defer></script>
   </head>
-  
+
   <body>
     <header class="site-header on-hero">
-      <a class="brand" href="#home" aria-label="Aries home">
+      <a class="brand" href="#home" aria-label="Aries Tayao home">
         <img
           class="brand-logo brand-logo-dark"
-          src="Sources/ARS_monogram_transparent_1.png"
+          src="Sources/ARS_monogram_transparent_1_white.png"
           alt=""
           aria-hidden="true"
         />
@@ -51,9 +51,11 @@
       </button>
 
       <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-        <a href="#work">My Projects</a>
-        <a href="#about">About Me</a>
-        <a href="#contact">Contact Me</a>
+        <a href="#about">About</a>
+        <a href="#work">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
@@ -62,127 +64,666 @@
         <img
           class="hero-image"
           src="Sources/ChatGPT Image Jun 30, 2026, 07_50_48 AM.png"
-          alt="Illustrated hero portrait of Aries with web developer text"
+          alt="Illustrated portrait of Aries Tayao with web developer artwork"
         />
         <div class="hero-shade" aria-hidden="true"></div>
 
         <div class="hero-content section-shell">
-          <div class="hero-copy">
+          <div class="hero-copy reveal">
             <p class="eyebrow">HI, I&rsquo;M</p>
             <h1>Aries Tayao</h1>
+            <p class="role-line">Web Developer &bull; UI Builder &bull; Problem Solver</p>
             <p class="hero-text">
               Practical web apps, built with clarity and creative rhythm.
             </p>
             <div class="hero-actions" aria-label="Primary links">
               <a class="button" href="#work">View Projects</a>
-              <a class="button button-outline" href="#about">About Me</a>
+              <a class="button button-outline" href="#contact">Contact Me</a>
+            </div>
+            <div class="hero-links" aria-label="Social links">
+              <a href="https://github.com/ars1224" target="_blank" rel="noreferrer">GitHub</a>
+              <a
+                href="https://www.linkedin.com/in/jhon-aries-tayao-5a4112212/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a href="mailto:contact@builtbyars.dev">Email</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="work" class="section-shell section-block">
-        <div class="section-heading">
-          <p class="eyebrow">Selected work</p>
-          <h2>Projects</h2>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card">
-            <p class="project-type">Website</p>
-            <h3>Personal portfolio</h3>
-            <p>
-              A responsive portfolio with a custom ARS mark, clean sections,
-              and a simple structure for future projects.
-            </p>
-            <a
-              href="https://github.com/ars1224/Aries-portfolio"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View repository
-            </a>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">Learning</p>
-            <h3>Web practice</h3>
-            <p>
-              Small builds and experiments made while learning layout,
-              interaction, and front-end fundamentals.
-            </p>
-            <a
-              href="https://github.com/ars1224?tab=repositories"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Browse projects
-            </a>
-          </article>
-
-          <article class="project-card">
-            <p class="project-type">Next</p>
-            <h3>More coming soon</h3>
-            <p>
-              This space is ready for new work, case studies, and polished
-              project notes as the portfolio grows.
-            </p>
-            <a href="#contact">Get in touch</a>
-          </article>
-        </div>
-      </section>
-
       <section id="about" class="section-shell section-block about-grid">
-        <div class="section-heading">
-          <p class="eyebrow">About</p>
-          <h2>Curious, practical, always learning.</h2>
-        </div>
-
-        <div class="about-panel">
+        <div class="about-media reveal">
           <figure class="about-photo">
             <img
               src="Sources/ChatGPT Image Jun 29, 2026, 11_35_29 PM.png"
               alt="Illustrated portrait of Aries in a workspace"
             />
           </figure>
+        </div>
 
-          <div class="about-copy">
-            <p>
-              I'm Aries, a builder focused on learning by making real things. I
-              like clear interfaces, useful details, and projects that teach me
-              something new.
-            </p>
-            <div class="skills-list" aria-label="Skills">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>Responsive design</span>
-            </div>
+        <div class="about-copy reveal">
+          <p class="eyebrow">About me</p>
+          <h2>Practical developer, creative thinker, always improving.</h2>
+          <p class="about-lead">
+           I&rsquo;m Aries, a web developer who enjoys turning real problems into
+           useful digital tools. I build responsive websites, booking systems,
+           inventory platforms, dashboards, and small business applications with
+           a focus on clarity, usability, and practical results.
+          </p>
+
+          <div class="about-points">
+            <article>
+              <h3>What I build</h3>
+              <p>
+                I create web applications that support real workflows, including
+                booking management, inventory tracking, admin dashboards, reporting tools,
+                and responsive websites. I enjoy taking complicated information and shaping
+                it into something simple, organised, and easy to use.
+              </p>
+            </article>
+            <article>
+              <h3>How I work</h3>
+              <p>
+                I start by understanding the user, the task, and the problem behind the screen.
+                From there, I plan the flow, build the core features, test the experience, and
+                keep refining the details until everything feels clear and reliable.
+              </p>
+            </article>
+            <article>
+              <h3>Beyond development</h3>
+              <p>
+                Outside development, I&rsquo;m interested in music, visual design, technology, fitness,
+                and creative projects. These interests influence how I approach my work and help me
+                think about rhythm, balance, presentation, and the overall user experience.
+              </p>
+            </article>
           </div>
         </div>
       </section>
 
-      <section id="contact" class="section-shell contact-section">
+      <section id="work" class="section-shell section-block">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Featured work</p>
+          <h2>Practical systems, built around real workflows.</h2>
+          <p>
+            Selected projects across inventory, tourism, event invitations,
+            hospitality, employee records, student records, budgeting, and
+            booking websites.
+          </p>
+        </div>
+
+        <article class="project-card project-featured reveal">
+          <figure class="project-media project-media-duo">
+            <img
+              src="Sources/projects/kiss-web-dashboard.png"
+              alt="KISS-Web inventory dashboard"
+            />
+            <img
+              src="Sources/projects/kiss-web-orders-list.png"
+              alt="KISS-Web orders list"
+            />
+          </figure>
+
+          <div class="project-content">
+            <p class="project-type">Star project / warehouse management</p>
+            <h3>KISS-Web Inventory and Warehouse Management System</h3>
+            <p>
+              A warehouse management web application that improves stock
+              visibility, location tracking, order processing, product
+              movement, and operational reporting.
+            </p>
+            <p class="project-role">
+              Role: full-stack developer responsible for the dashboard,
+              inventory locations, products, orders, transactions,
+              notifications, role permissions, and mobile-responsive
+              interface.
+            </p>
+            <div class="tag-list" aria-label="Project technologies">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+              <span>PDO</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
+            <div class="project-actions">
+              <a class="button button-small" href="https://github.com/ars1224/Kiss-Web" target="_blank" rel="noreferrer">GitHub</a>
+              <span class="project-status">Internal system, no public demo</span>
+            </div>
+            <div class="project-demo" aria-label="KISS-Web demo videos">
+              <video
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="Sources/projects/kiss-web-dashboard.png"
+                aria-label="KISS-Web desktop workflow demo"
+              >
+                <source src="Sources/projects/kiss-web-video-sample-desktop-view.mov" />
+              </video>
+              <video
+                class="project-video-phone"
+                controls
+                muted
+                playsinline
+                preload="metadata"
+                poster="Sources/projects/kiss-web-orders-list.png"
+                aria-label="KISS-Web mobile workflow demo"
+              >
+                <source src="Sources/projects/kiss-web-video-sample-mobile-view.mov" />
+              </video>
+            </div>
+          </div>
+        </article>
+
+        <div class="project-grid project-grid-expanded">
+          <article class="project-card reveal">
+            <figure class="project-media project-media-duo">
+              <img
+                src="Sources/projects/Ariesjadeinvitation-hero.png"
+                alt="Aries and Jade digital wedding invitation hero screen"
+              />
+              <img
+                src="Sources/projects/Ariesjadeinvitation-guest-manager-dashboard.png"
+                alt="Aries and Jade guest manager dashboard"
+              />
+            </figure>
+            <div class="project-content">
+              <p class="project-type">Full-stack event website</p>
+              <h3>Aries &amp; Jade Digital Wedding Invitation</h3>
+              <p>
+                A personalised digital invitation that gives guests easy access
+                to wedding details, RSVP confirmation, and event information in
+                one place.
+              </p>
+              <p class="project-role">
+                Role: full-stack developer and UI designer responsible for the
+                website design, responsive interface, RSVP system, guest
+                management, deployment, and Google Sheets integration.
+              </p>
+              <div class="tag-list" aria-label="Project technologies">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>Netlify Functions</span>
+                <span>Google Sheets API</span>
+              </div>
+              <div class="project-actions">
+                <a
+                  class="button button-small"
+                  href="https://ariesjadeweddinginvitation.netlify.app/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Live Demo
+                </a>
+                <a
+                  class="button button-small button-ghost"
+                  href="https://github.com/ars1224/JadeAries"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <figure class="project-media project-media-duo">
+              <img
+                src="Sources/projects/Explore NZ-home.png"
+                alt="Explore NZ tourism website homepage"
+              />
+              <img
+                src="Sources/projects/Explore NZ-discover.png"
+                alt="Explore NZ tourism website discover section"
+              />
+            </figure>
+            <div class="project-content">
+              <p class="project-type">Tourism website</p>
+              <h3>Explore NZ &ndash; New Zealand Tourism Website</h3>
+              <p>
+                A responsive tourism website that helps users discover New
+                Zealand&rsquo;s natural landmarks, cultural attractions, events,
+                and popular destinations through informative pages and an
+                interactive map.
+              </p>
+              <p class="project-role">
+                Role: front-end developer and UI designer responsible for the
+                responsive layout, navigation, destination pages, tour sections,
+                styling, and interactive New Zealand map.
+              </p>
+              <div class="tag-list" aria-label="Project technologies">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Bootstrap</span>
+                <span>Leaflet.js</span>
+              </div>
+              <div class="project-actions">
+                <a
+                  class="button button-small"
+                  href="https://github.com/ars1224/Explore-NZ"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+                <span class="project-status">No public live demo</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <figure class="project-media">
+              <img
+                src="Sources/projects/noble-innsync-homepage-client.png"
+                alt="Noble InnSync hotel booking homepage"
+              />
+            </figure>
+            <div class="project-content">
+              <p class="project-type">Hotel booking platform</p>
+              <h3>Noble InnSync Hotel Booking and Operations System</h3>
+              <p>
+                A complete hotel management platform that brings guest
+                bookings, room availability, payments, maintenance, inventory,
+                and staff operations into one system.
+              </p>
+              <p class="project-role">
+                Role: full-stack developer responsible for the booking
+                workflow, room availability logic, staff portal, database
+                models, dashboards, validations, payments, reporting, and
+                responsive UI.
+              </p>
+              <div class="tag-list" aria-label="Project technologies">
+                <span>Python</span>
+                <span>Flask</span>
+                <span>SQLite</span>
+                <span>SQLAlchemy</span>
+                <span>Jinja2</span>
+                <span>JavaScript</span>
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-small" href="https://github.com/ars1224/Noble_InnSync" target="_blank" rel="noreferrer">GitHub</a>
+                <span class="project-status">Live demo pending</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <figure class="project-media">
+              <img
+                src="Sources/projects/at-invman-login and main menu.png"
+                alt="AT-InvMan console login and main menu"
+              />
+            </figure>
+            <div class="project-content">
+              <p class="project-type">Desktop inventory system</p>
+              <h3>AT-InvMan Inventory Management System</h3>
+              <p>
+                A desktop inventory system that helps businesses manage
+                products, stock movements, branches, staff roles, and sales
+                records.
+              </p>
+              <p class="project-role">
+                Role: developer responsible for the application logic, database
+                integration, role-based access, inventory workflows, and console
+                interface.
+              </p>
+              <div class="tag-list" aria-label="Project technologies">
+                <span>C++</span>
+                <span>SQLite</span>
+                <span>SQL</span>
+                <span>SQLite3</span>
+              </div>
+              <div class="project-actions">
+                <a class="button button-small" href="https://github.com/ars1224/Aotearoa-Treasures--inventory-management-system" target="_blank" rel="noreferrer">GitHub</a>
+                <span class="project-status">Desktop app, no public demo</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <figure class="project-media">
+              <img
+                src="Sources/projects/NZFTC Employee management System - dashboard.png"
+                alt="NZFTC employee management dashboard"
+              />
+            </figure>
+            <div class="project-content">
+              <p class="project-type">Employee records platform</p>
+              <h3>NZFTC Employee Management System</h3>
+              <p>
+                An employee management platform that centralises staff
+                information and makes workforce records easier to organise and
+                access.
+              </p>
+              <p class="project-role">
+                Role: developer responsible for the system interface,
+                authentication, employee management features, dashboard, and
+                database integration using ASP.NET Core MVC with Razor Views.
+              </p>
+              <div class="tag-list" aria-label="Project technologies">
+                <span>C#</span>
+                <span>ASP.NET Core</span>
+                <span>Razor Views</span>
+                <span>Entity Framework Core</span>
+                <span>MySQL</span>
+                <span>Bootstrap</span>
+              </div>
+              <div class="project-actions">
+                <a
+                  class="button button-small"
+                  href="https://github.com/ars1224/NZFTC-Employee-Management-System"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+                <span class="project-status">Live demo pending</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <figure class="project-media">
+              <img
+                src="Sources/projects/StudentMS-Main Menu-console.png"
+                alt="Student Management System console main menu"
+              />
+            </figure>
+            <div class="project-content">
+              <p class="project-type">Console student system</p>
+              <h3>Student Management System</h3>
+              <p>
+                A console-based application that simplifies the process of
+                recording, viewing, updating, and organising student
+                information.
+              </p>
+              <p class="project-role">
+                Role: developer responsible for the program structure, menu
+                navigation, student record operations, validation, and data
+                handling.
+              </p>
+              <div class="tag-list" aria-label="Project technologies">
+                <span>C++</span>
+                <span>Console Application</span>
+                <span>Standard Library</span>
+              </div>
+              <div class="project-actions">
+                <a
+                  class="button button-small"
+                  href="https://github.com/ars1224/Student-Management-System"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+                <span class="project-status">No public live demo</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <figure class="project-media">
+              <img
+                src="Sources/projects/Wdding Budget app-dashboard.png"
+                alt="Wedding Budget Management App dashboard"
+              />
+            </figure>
+            <div class="project-content">
+              <p class="project-type">Budget dashboard</p>
+              <h3>Aries &amp; Jade Wedding Budget Management App</h3>
+              <p>
+                A budgeting application that helps couples track wedding
+                expenses, payments, category allocations, and remaining funds.
+              </p>
+              <p class="project-role">
+                Role: developer and UI designer responsible for the dashboard,
+                budget calculations, expense tracking, categories, and visual
+                summaries.
+              </p>
+              <div class="tag-list" aria-label="Project technologies">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>Netlify Functions</span>
+                <span>Google Sheets API</span>
+                <span>Chart.js</span>
+              </div>
+              <div class="project-actions">
+                <a
+                  class="button button-small"
+                  href="https://github.com/ars1224/Wedding-Budget-Management-App"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+                <span class="project-status">Live demo pending</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <figure class="project-media">
+              <img
+                src="Sources/projects/zenfit- homepage.png"
+                alt="ZenFit Fitness and Booking Website homepage"
+              />
+            </figure>
+            <div class="project-content">
+              <p class="project-type">Fitness booking website</p>
+              <h3>ZenFit Fitness and Booking Website</h3>
+              <p>
+                A responsive fitness website that allows customers to learn
+                about the business, explore its services, and submit bookings
+                online.
+              </p>
+              <p class="project-role">
+                Role: front-end developer and UI designer responsible for the
+                homepage, about section, booking interface, responsive layout,
+                and overall visual design.
+              </p>
+              <div class="tag-list" aria-label="Project technologies">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Bootstrap</span>
+                <span>Font Awesome</span>
+              </div>
+              <div class="project-actions">
+                <a
+                  class="button button-small"
+                  href="https://github.com/ars1224/ZenFit-Fitness-and-Booking-Website"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+                <span class="project-status">Live demo pending</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section-shell section-block">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Skills</p>
+          <h2>Tools I use to turn ideas into working products.</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">F</div>
+            <h3>Frontend</h3>
+            <div class="skill-chips" aria-label="Frontend skills">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+              <span>Razor</span>
+              <span>Jinja2</span>
+              <span>Responsive Design</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">A</div>
+            <h3>Backend &amp; Applications</h3>
+            <div class="skill-chips" aria-label="Backend and application skills">
+              <span>C#</span>
+              <span>ASP.NET Core MVC</span>
+              <span>Python</span>
+              <span>Flask</span>
+              <span>PHP</span>
+              <span>Node.js</span>
+              <span>C++</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">D</div>
+            <h3>Data &amp; Integrations</h3>
+            <div class="skill-chips" aria-label="Data and integration skills">
+              <span>MySQL</span>
+              <span>SQLite</span>
+              <span>Entity Framework Core</span>
+              <span>SQLAlchemy</span>
+              <span>Google Sheets API</span>
+              <span>Netlify Functions</span>
+              <span>Leaflet.js</span>
+              <span>Chart.js</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-icon" aria-hidden="true">T</div>
+            <h3>Tools &amp; Deployment</h3>
+            <div class="skill-chips" aria-label="Tools and deployment skills">
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>Netlify</span>
+              <span>VS Code</span>
+              <span>Visual Studio</span>
+              <span>XAMPP</span>
+              <span>Trello</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="process" class="section-shell section-block">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How I build</p>
+          <h2>A practical process for turning ideas into working products.</h2>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-step reveal">
+            <span>01</span>
+            <h3>Discover</h3>
+            <p>Understand the problem, users, goals, required features, and real workflow the product needs to support.</p>
+          </article>
+          <article class="process-step reveal">
+            <span>02</span>
+            <h3>Plan &amp; Design</h3>
+            <p>Map the user journey, database structure, page hierarchy, and interface before development begins.</p>
+          </article>
+          <article class="process-step reveal">
+            <span>03</span>
+            <h3>Build</h3>
+            <p>Develop the frontend, backend, database, and integrations using clean, responsive, and maintainable code.</p>
+          </article>
+          <article class="process-step reveal">
+            <span>04</span>
+            <h3>Test &amp; Improve</h3>
+            <p>Test real workflows, fix issues, refine usability, and improve the product based on feedback and results.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section-shell contact-section reveal">
         <p class="eyebrow">Contact</p>
-        <h2>Let's connect.</h2>
+        <h2>Have a project, opportunity, or idea worth building?</h2>
         <p>
-          The best place to find me right now is GitHub. Send me an idea, check
-          out the code, or follow along as the work evolves.
+          I&rsquo;m open to junior developer roles, freelance projects, and
+          collaborations involving practical web applications, internal tools,
+          and business systems. Send me a message, explore my work, or connect
+          with me online.
         </p>
-        <a
-          class="button"
-          href="https://github.com/ars1224"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Visit GitHub
-        </a>
+        <div class="contact-actions">
+          <a class="button" href="mailto:contact@builtbyars.dev">Email Me</a>
+          <a class="button button-ghost" href="https://github.com/ars1224" target="_blank" rel="noreferrer">GitHub</a>
+          <a
+            class="button button-ghost"
+            href="https://www.linkedin.com/in/jhon-aries-tayao-5a4112212/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>Aries Portfolio</span>
-      <a href="#home">Back to top</a>
+      <div class="footer-main">
+        <a class="footer-brand" href="#home" aria-label="Aries Tayao home">
+          <img
+            class="footer-logo"
+            src="Sources/ARS_monogram_transparent_1_white.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <span>
+            <strong>Aries Tayao</strong>
+            <small>Full-Stack Developer &middot; Software Builder</small>
+          </span>
+        </a>
+        <p>
+          Building practical web applications, internal tools, and business
+          systems with clean interfaces and reliable workflows.
+        </p>
+      </div>
+
+      <nav class="footer-group" aria-label="Footer navigation">
+        <h2>Navigate</h2>
+        <a href="#about">About</a>
+        <a href="#work">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="footer-group footer-contact">
+        <h2>Contact</h2>
+        <a href="mailto:contact@builtbyars.dev">contact@builtbyars.dev</a>
+        <a href="https://github.com/ars1224" target="_blank" rel="noreferrer">GitHub</a>
+        <a
+          href="https://www.linkedin.com/in/jhon-aries-tayao-5a4112212/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Aries Tayao. All rights reserved.</span>
+        <a href="#home">Back to top</a>
+      </div>
     </footer>
   </body>
 </html>
