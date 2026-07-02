@@ -18,8 +18,8 @@
       rel="apple-touch-icon"
       href="Sources/ARS_monogram_transparent_1.png"
     />
-    <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=20260702-6" />
+    <script src="js/script.js?v=20260702-6" defer></script>
   </head>
 
   <body>
@@ -78,12 +78,30 @@
             </p>
             <div class="hero-actions" aria-label="Primary links">
               <a class="button" href="#work">View Projects</a>
+              <a
+                class="button button-outline button-with-icon"
+                href="files/Jhon-Aries-Tayao-CV.pdf"
+                download="Jhon-Aries-Tayao-CV.pdf"
+                aria-label="Download Aries Tayao CV as a PDF"
+              >
+                <svg
+                  class="button-icon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path d="M12 3v11"></path>
+                  <path d="m7 10 5 5 5-5"></path>
+                  <path d="M5 20h14"></path>
+                </svg>
+                <span>Download CV</span>
+              </a>
               <a class="button button-outline" href="#contact">Contact Me</a>
             </div>
             <div class="hero-links" aria-label="Social links">
               <a href="https://github.com/ars1224" target="_blank" rel="noreferrer">GitHub</a>
               <a
-                href="https://www.linkedin.com/in/jhon-aries-tayao-5a4112212/"
+                href="https://www.linkedin.com/in/ariestayao/"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -114,6 +132,27 @@
            inventory platforms, dashboards, and small business applications with
            a focus on clarity, usability, and practical results.
           </p>
+
+          <div class="about-actions">
+            <a
+              class="button button-small button-ghost button-with-icon"
+              href="files/Jhon-Aries-Tayao-CV.pdf"
+              download="Jhon-Aries-Tayao-CV.pdf"
+              aria-label="Download Aries Tayao CV as a PDF"
+            >
+              <svg
+                class="button-icon"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path d="M12 3v11"></path>
+                <path d="m7 10 5 5 5-5"></path>
+                <path d="M5 20h14"></path>
+              </svg>
+              <span>Download CV</span>
+            </a>
+          </div>
 
           <div class="about-points">
             <article>
@@ -157,10 +196,18 @@
         </div>
 
         <article class="project-card project-featured reveal">
-          <figure class="project-media project-media-duo">
+          <figure class="project-media project-gallery" aria-label="KISS-Web screenshots">
             <img
               src="Sources/projects/kiss-web-dashboard.png"
               alt="KISS-Web inventory dashboard"
+            />
+            <img
+              src="Sources/projects/kiss-web-locations.png"
+              alt="KISS-Web inventory location management"
+            />
+            <img
+              src="Sources/projects/kiss-web-transactions.png"
+              alt="KISS-Web transaction records"
             />
             <img
               src="Sources/projects/kiss-web-orders-list.png"
@@ -169,7 +216,7 @@
           </figure>
 
           <div class="project-content">
-            <p class="project-type">Star project / warehouse management</p>
+            <p class="project-type">Warehouse management</p>
             <h3>KISS-Web Inventory and Warehouse Management System</h3>
             <p>
               A warehouse management web application that improves stock
@@ -195,38 +242,55 @@
               <a class="button button-small" href="https://github.com/ars1224/Kiss-Web" target="_blank" rel="noreferrer">GitHub</a>
               <span class="project-status">Internal system, no public demo</span>
             </div>
-            <div class="project-demo" aria-label="KISS-Web demo videos">
-              <video
-                controls
-                muted
-                playsinline
-                preload="metadata"
-                poster="Sources/projects/kiss-web-dashboard.png"
-                aria-label="KISS-Web desktop workflow demo"
-              >
-                <source src="Sources/projects/kiss-web-video-sample-desktop-view.mov" />
-              </video>
-              <video
-                class="project-video-phone"
-                controls
-                muted
-                playsinline
-                preload="metadata"
-                poster="Sources/projects/kiss-web-orders-list.png"
-                aria-label="KISS-Web mobile workflow demo"
-              >
-                <source src="Sources/projects/kiss-web-video-sample-mobile-view.mov" />
-              </video>
-            </div>
           </div>
         </article>
 
+        <div class="project-demo reveal" aria-label="KISS-Web demo videos">
+          <div class="project-video-frame" data-video-player>
+            <img
+              class="project-video-poster"
+              src="Sources/projects/kiss-web-dashboard.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <video
+              class="project-video-rotated"
+              muted
+              playsinline
+              preload="metadata"
+              aria-label="KISS-Web desktop workflow demo"
+            >
+              <source src="Sources/projects/kiss-web-video-sample-desktop-view.mov" />
+            </video>
+            <button
+              class="video-toggle"
+              type="button"
+              aria-label="Play KISS-Web desktop landscape demo"
+            ></button>
+          </div>
+          <video
+            class="project-demo-mobile"
+            controls
+            muted
+            playsinline
+            preload="metadata"
+            poster="Sources/projects/kiss-web-orders-list.png"
+            aria-label="KISS-Web mobile workflow demo"
+          >
+            <source src="Sources/projects/kiss-web-video-sample-mobile-view.mov" />
+          </video>
+        </div>
+
         <div class="project-grid project-grid-expanded">
           <article class="project-card reveal">
-            <figure class="project-media project-media-duo">
+            <figure class="project-media project-gallery" aria-label="Aries and Jade project screenshots">
               <img
                 src="Sources/projects/Ariesjadeinvitation-hero.png"
                 alt="Aries and Jade digital wedding invitation hero screen"
+              />
+              <img
+                src="Sources/projects/Ariesjadeinvitation-guest-manager.png"
+                alt="Aries and Jade guest manager list"
               />
               <img
                 src="Sources/projects/Ariesjadeinvitation-guest-manager-dashboard.png"
@@ -276,7 +340,7 @@
           </article>
 
           <article class="project-card reveal">
-            <figure class="project-media project-media-duo">
+            <figure class="project-media project-gallery" aria-label="Explore NZ project screenshots">
               <img
                 src="Sources/projects/Explore NZ-home.png"
                 alt="Explore NZ tourism website homepage"
@@ -322,10 +386,30 @@
           </article>
 
           <article class="project-card reveal">
-            <figure class="project-media">
+            <figure class="project-media project-gallery" aria-label="Noble InnSync project screenshots">
               <img
                 src="Sources/projects/noble-innsync-homepage-client.png"
                 alt="Noble InnSync hotel booking homepage"
+              />
+              <img
+                src="Sources/projects/noble-innsync-rooms-page-client.png"
+                alt="Noble InnSync rooms listing page"
+              />
+              <img
+                src="Sources/projects/noble-innsync-rooms-page-details-client.png"
+                alt="Noble InnSync room details page"
+              />
+              <img
+                src="Sources/projects/noble-innsync-booking-form.png"
+                alt="Noble InnSync booking form"
+              />
+              <img
+                src="Sources/projects/noble-innsync-staff-login.png"
+                alt="Noble InnSync staff login"
+              />
+              <img
+                src="Sources/projects/noble-innsync-staff-dashboard-portal.png"
+                alt="Noble InnSync staff dashboard portal"
               />
             </figure>
             <div class="project-content">
@@ -393,10 +477,18 @@
           </article>
 
           <article class="project-card reveal">
-            <figure class="project-media">
+            <figure class="project-media project-gallery" aria-label="NZFTC Employee Management screenshots">
               <img
                 src="Sources/projects/NZFTC Employee management System - dashboard.png"
                 alt="NZFTC employee management dashboard"
+              />
+              <img
+                src="Sources/projects/NZFTC Employee management System - home page.png"
+                alt="NZFTC employee management home page"
+              />
+              <img
+                src="Sources/projects/NZFTC Employee management System - login.png"
+                alt="NZFTC employee management login page"
               />
             </figure>
             <div class="project-content">
@@ -435,10 +527,14 @@
           </article>
 
           <article class="project-card reveal">
-            <figure class="project-media">
+            <figure class="project-media project-gallery" aria-label="Student Management System screenshots">
               <img
                 src="Sources/projects/StudentMS-Main Menu-console.png"
                 alt="Student Management System console main menu"
+              />
+              <img
+                src="Sources/projects/StudentMS-login-console.png"
+                alt="Student Management System console login"
               />
             </figure>
             <div class="project-content">
@@ -516,10 +612,22 @@
           </article>
 
           <article class="project-card reveal">
-            <figure class="project-media">
+            <figure class="project-media project-gallery" aria-label="ZenFit project screenshots">
               <img
                 src="Sources/projects/zenfit- homepage.png"
                 alt="ZenFit Fitness and Booking Website homepage"
+              />
+              <img
+                src="Sources/projects/zenfit- about page.png"
+                alt="ZenFit Fitness and Booking Website about page"
+              />
+              <img
+                src="Sources/projects/zenfit- booking.png"
+                alt="ZenFit Fitness and Booking Website booking page"
+              />
+              <img
+                src="Sources/projects/zenfit- joining page form.png"
+                alt="ZenFit Fitness and Booking Website joining form"
               />
             </figure>
             <div class="project-content">
@@ -668,7 +776,7 @@
           <a class="button button-ghost" href="https://github.com/ars1224" target="_blank" rel="noreferrer">GitHub</a>
           <a
             class="button button-ghost"
-            href="https://www.linkedin.com/in/jhon-aries-tayao-5a4112212/"
+            href="https://www.linkedin.com/in/ariestayao/"
             target="_blank"
             rel="noreferrer"
           >
@@ -712,7 +820,7 @@
         <a href="mailto:contact@builtbyars.dev">contact@builtbyars.dev</a>
         <a href="https://github.com/ars1224" target="_blank" rel="noreferrer">GitHub</a>
         <a
-          href="https://www.linkedin.com/in/jhon-aries-tayao-5a4112212/"
+          href="https://www.linkedin.com/in/ariestayao/"
           target="_blank"
           rel="noreferrer"
         >

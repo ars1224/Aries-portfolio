@@ -303,12 +303,38 @@ button {
   transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
+.button-with-icon {
+  gap: 9px;
+}
+
+.button-icon {
+  width: 1.05em;
+  height: 1.05em;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.2;
+  transition: transform 180ms ease;
+}
+
 .button:hover,
 .button:focus-visible {
   border-color: var(--accent-strong);
   background: var(--accent-strong);
   color: #130d06;
   transform: translateY(-2px);
+}
+
+.button:focus-visible {
+  outline: 3px solid rgba(245, 158, 11, 0.38);
+  outline-offset: 3px;
+}
+
+.button:hover .button-icon,
+.button:focus-visible .button-icon {
+  transform: translateY(1px);
 }
 
 .button-outline,
@@ -359,9 +385,7 @@ button {
 }
 
 .project-featured {
-  display: grid;
-  grid-template-columns: minmax(0, 1.06fr) minmax(280px, 0.86fr);
-  gap: clamp(24px, 5vw, 54px);
+  display: block;
   margin-bottom: 22px;
 }
 
@@ -405,8 +429,17 @@ button {
 .project-featured .project-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: clamp(24px, 5vw, 42px);
+  justify-content: flex-start;
+  padding: clamp(28px, 5vw, 52px);
+}
+
+.project-featured h3 {
+  max-width: 930px;
+  font-size: clamp(2rem, 4.2vw, 3.35rem);
+}
+
+.project-featured p:not(.project-type) {
+  max-width: 890px;
 }
 
 .project-type {
@@ -487,17 +520,17 @@ button {
   overflow: hidden;
 }
 
-.project-featured .project-media {
-  min-height: 420px;
-  aspect-ratio: auto;
-  border-right: 1px solid var(--line);
-  border-bottom: 0;
+.project-gallery {
+  position: relative;
+  display: block;
+  background: #0f1419;
 }
 
-.project-media-duo {
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
-  gap: 1px;
-  background: var(--line);
+.project-featured .project-media {
+  min-height: clamp(360px, 46vw, 560px);
+  aspect-ratio: 16 / 9;
+  border-right: 0;
+  border-bottom: 1px solid var(--line);
 }
 
 .project-media img,
@@ -513,31 +546,178 @@ button {
   background: #05070a;
 }
 
-.project-video-phone {
-  object-fit: contain;
+.carousel-dots {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 2;
+  display: none;
+  align-items: center;
+  gap: 7px;
+}
+
+.carousel-dots span {
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgba(255, 247, 237, 0.42);
+  border-radius: 999px;
+  background: rgba(11, 9, 8, 0.46);
+  transition: width 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.carousel-dots span.is-active {
+  width: 20px;
+  border-color: var(--accent);
+  background: var(--accent);
+}
+
+.project-gallery img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  min-height: 0;
+  opacity: 0;
+  transform: scale(1.015);
+  transition: opacity 640ms ease, transform 640ms ease;
+}
+
+.project-gallery img.is-active {
+  z-index: 1;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.project-gallery .carousel-dots {
+  display: flex;
+}
+
+.project-gallery:focus-visible {
+  outline: 3px solid rgba(245, 158, 11, 0.38);
+  outline-offset: 3px;
 }
 
 .project-demo {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(140px, 0.6fr);
-  gap: 10px;
-  margin-top: 22px;
-  padding-top: 18px;
-  border-top: 1px solid var(--line);
+  grid-template-columns: minmax(0, 1.4fr) minmax(160px, 0.56fr);
+  gap: 12px;
+  margin: 18px 0 34px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 247, 237, 0.045), rgba(255, 247, 237, 0.015)), var(--surface);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.24);
 }
 
-.project-demo video {
+.project-demo > video,
+.project-video-frame {
   width: 100%;
   min-width: 0;
-  aspect-ratio: 16 / 9;
   border: 1px solid rgba(255, 247, 237, 0.12);
   border-radius: 8px;
   background: #05070a;
+}
+
+.project-demo > video {
   object-fit: cover;
   object-position: top center;
 }
 
-.project-demo .project-video-phone {
+.project-video-frame {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.project-video-poster {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+.project-video-frame.has-played .project-video-poster {
+  opacity: 0;
+}
+
+.project-video-frame video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 0;
+  width: 56.25%;
+  height: 177.777%;
+  max-width: none;
+  border: 0;
+  border-radius: 0;
+  background: #05070a;
+  object-fit: cover;
+  object-position: center;
+  transform: translate(-50%, -50%) rotate(270deg);
+  transform-origin: center;
+}
+
+.video-toggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border: 1px solid rgba(255, 247, 237, 0.34);
+  border-radius: 999px;
+  background: rgba(11, 9, 8, 0.66);
+  color: var(--ink);
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  transition: background 180ms ease, border-color 180ms ease, opacity 180ms ease, transform 180ms ease;
+}
+
+.video-toggle::before {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-left: 4px;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-left: 17px solid currentColor;
+}
+
+.project-video-frame.is-playing .video-toggle {
+  opacity: 0;
+}
+
+.project-video-frame:hover .video-toggle,
+.project-video-frame:focus-within .video-toggle,
+.video-toggle:focus-visible {
+  border-color: var(--accent);
+  background: rgba(245, 158, 11, 0.18);
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.04);
+}
+
+.project-video-frame.is-playing .video-toggle::before {
+  width: 16px;
+  height: 18px;
+  margin-left: 0;
+  border: 0;
+  border-right: 5px solid currentColor;
+  border-left: 5px solid currentColor;
+}
+
+.video-toggle:focus-visible {
+  outline: 3px solid rgba(245, 158, 11, 0.38);
+  outline-offset: 4px;
+}
+
+.project-demo-mobile {
   aspect-ratio: 9 / 16;
   object-fit: contain;
 }
@@ -619,6 +799,13 @@ button {
   max-width: 690px;
   margin: 22px 0 0;
   font-size: 1.08rem;
+}
+
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
 }
 
 .about-points {
@@ -944,6 +1131,7 @@ button {
   }
 
   .hero-actions,
+  .about-actions,
   .contact-actions {
     align-items: stretch;
     flex-direction: column;
@@ -971,22 +1159,9 @@ button {
     min-height: 200px;
   }
 
-  .project-media-duo {
-    grid-template-columns: 1fr;
-    aspect-ratio: auto;
-  }
-
-  .project-media-duo img,
-  .project-media-duo video {
-    min-height: 190px;
-  }
-
   .project-demo {
     grid-template-columns: 1fr;
-  }
-
-  .project-demo .project-video-phone {
-    aspect-ratio: 16 / 9;
+    padding: 10px;
   }
 
   .footer-bottom {
