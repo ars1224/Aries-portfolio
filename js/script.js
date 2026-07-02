@@ -4,6 +4,7 @@ const header = document.querySelector(".site-header");
 const hero = document.querySelector(".hero");
 const revealItems = document.querySelectorAll(".reveal");
 const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+const mobileNavQuery = window.matchMedia("(max-width: 920px)");
 
 function updateHeaderState() {
   if (!header || !hero) {
@@ -14,18 +15,66 @@ function updateHeaderState() {
 }
 
 if (menuToggle && navigation) {
+  const navLinks = Array.from(navigation.querySelectorAll("a"));
+
+  function setNavigationState(isOpen) {
+    const isMobile = mobileNavQuery.matches;
+    const isHidden = isMobile && !isOpen;
+
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute(
+      "aria-label",
+      `${isOpen ? "Close" : "Open"} navigation`
+    );
+
+    navigation.classList.toggle("open", isMobile && isOpen);
+    navigation.setAttribute("aria-hidden", String(isHidden));
+
+    if ("inert" in navigation) {
+      navigation.inert = isHidden;
+    } else if (isHidden) {
+      navigation.setAttribute("inert", "");
+    } else {
+      navigation.removeAttribute("inert");
+    }
+
+    navLinks.forEach((link) => {
+      if (isHidden) {
+        link.setAttribute("tabindex", "-1");
+      } else {
+        link.removeAttribute("tabindex");
+      }
+    });
+
+    if (isHidden && navigation.contains(document.activeElement)) {
+      menuToggle.focus({ preventScroll: true });
+    }
+  }
+
   menuToggle.addEventListener("click", () => {
     const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", String(!isOpen));
-    navigation.classList.toggle("open", !isOpen);
+    setNavigationState(!isOpen);
   });
 
-  navigation.querySelectorAll("a").forEach((link) => {
+  navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      menuToggle.setAttribute("aria-expanded", "false");
-      navigation.classList.remove("open");
+      setNavigationState(false);
     });
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setNavigationState(false);
+    }
+  });
+
+  if (mobileNavQuery.addEventListener) {
+    mobileNavQuery.addEventListener("change", () => setNavigationState(false));
+  } else {
+    mobileNavQuery.addListener(() => setNavigationState(false));
+  }
+
+  setNavigationState(false);
 }
 
 updateHeaderState();

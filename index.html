@@ -18,8 +18,8 @@
       rel="apple-touch-icon"
       href="Sources/ARS_monogram_transparent_1.png"
     />
-    <link rel="stylesheet" href="css/styles.css?v=20260702-6" />
-    <script src="js/script.js?v=20260702-6" defer></script>
+    <link rel="stylesheet" href="css/styles.css?v=20260702-8" />
+    <script src="js/script.js?v=20260702-8" defer></script>
   </head>
 
   <body>
@@ -42,6 +42,7 @@
       <button
         class="menu-toggle"
         type="button"
+        aria-label="Open navigation"
         aria-expanded="false"
         aria-controls="site-nav"
       >
@@ -72,7 +73,11 @@
           <div class="hero-copy reveal">
             <p class="eyebrow">HI, I&rsquo;M</p>
             <h1>Aries Tayao</h1>
-            <p class="role-line">Web Developer &bull; UI Builder &bull; Problem Solver</p>
+            <p class="role-line" aria-label="Web Developer, UI Builder, Problem Solver">
+              <span class="role-piece">Web Developer</span>
+              <span class="role-piece">UI Builder</span>
+              <span class="role-piece">Problem Solver</span>
+            </p>
             <p class="hero-text">
               Practical web apps, built with clarity and creative rhythm.
             </p>
@@ -281,7 +286,7 @@
           </video>
         </div>
 
-        <div class="project-grid project-grid-expanded">
+        <div class="project-grid project-grid-spotlight">
           <article class="project-card reveal">
             <figure class="project-media project-gallery" aria-label="Aries and Jade project screenshots">
               <img
@@ -442,8 +447,16 @@
               </div>
             </div>
           </article>
+        </div>
 
-          <article class="project-card reveal">
+        <div class="more-projects reveal">
+          <div class="more-projects-heading">
+            <p class="eyebrow">More projects</p>
+            <h3>Additional builds across web, desktop, and console applications.</h3>
+          </div>
+
+          <div class="project-grid project-grid-compact">
+            <article class="project-card reveal">
             <figure class="project-media">
               <img
                 src="Sources/projects/at-invman-login and main menu.png"
@@ -476,7 +489,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+            <article class="project-card reveal">
             <figure class="project-media project-gallery" aria-label="NZFTC Employee Management screenshots">
               <img
                 src="Sources/projects/NZFTC Employee management System - dashboard.png"
@@ -526,7 +539,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+            <article class="project-card reveal">
             <figure class="project-media project-gallery" aria-label="Student Management System screenshots">
               <img
                 src="Sources/projects/StudentMS-Main Menu-console.png"
@@ -569,7 +582,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+            <article class="project-card reveal">
             <figure class="project-media">
               <img
                 src="Sources/projects/Wdding Budget app-dashboard.png"
@@ -611,7 +624,7 @@
             </div>
           </article>
 
-          <article class="project-card reveal">
+            <article class="project-card reveal">
             <figure class="project-media project-gallery" aria-label="ZenFit project screenshots">
               <img
                 src="Sources/projects/zenfit- homepage.png"
@@ -663,6 +676,7 @@
               </div>
             </div>
           </article>
+          </div>
         </div>
       </section>
 
