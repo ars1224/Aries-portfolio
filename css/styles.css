@@ -313,7 +313,7 @@ button {
   color: #180f05;
   font-size: 0.94rem;
   font-weight: 900;
-  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .button-with-icon {
@@ -364,6 +364,21 @@ button {
   border-color: rgba(245, 158, 11, 0.64);
   background: rgba(245, 158, 11, 0.12);
   color: #ffffff;
+}
+
+.cv-download-button {
+  border-color: rgba(255, 247, 237, 0.92);
+  background: linear-gradient(135deg, #fff7ed 0%, #ffd98a 100%);
+  color: #180f05;
+  box-shadow: 0 12px 34px rgba(245, 158, 11, 0.28);
+}
+
+.cv-download-button:hover,
+.cv-download-button:focus-visible {
+  border-color: #ffffff;
+  background: linear-gradient(135deg, #ffffff 0%, #fbbf24 100%);
+  color: #130d06;
+  box-shadow: 0 16px 38px rgba(245, 158, 11, 0.36);
 }
 
 .button-small {
