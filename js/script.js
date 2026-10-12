@@ -98,6 +98,45 @@ revealItems.forEach((item, index) => {
   revealObserver.observe(item);
 });
 
+document.querySelectorAll("[data-tech-carousel]").forEach((carousel) => {
+  const track = carousel.querySelector(".tech-carousel-track");
+  const toggle = carousel.querySelector("[data-tech-toggle]");
+  let paused = false;
+  let visible = false;
+
+  Array.from(track.children).forEach((item) => {
+    const duplicate = item.cloneNode(true);
+    duplicate.setAttribute("aria-hidden", "true");
+    track.appendChild(duplicate);
+  });
+  carousel.classList.add("is-animated");
+
+  function syncAnimation() {
+    carousel.classList.toggle("is-paused", paused);
+    carousel.classList.toggle("is-idle", !visible || document.hidden);
+    toggle.hidden = reducedMotionQuery.matches;
+    toggle.textContent = paused ? "Play animation" : "Pause animation";
+    toggle.setAttribute("aria-pressed", String(paused));
+  }
+
+  toggle.addEventListener("click", () => {
+    paused = !paused;
+    syncAnimation();
+  });
+  document.addEventListener("visibilitychange", syncAnimation);
+  const techObserver = new IntersectionObserver(([entry]) => {
+    visible = entry.isIntersecting;
+    syncAnimation();
+  }, { threshold: 0.1 });
+  techObserver.observe(carousel);
+  if (reducedMotionQuery.addEventListener) {
+    reducedMotionQuery.addEventListener("change", syncAnimation);
+  } else {
+    reducedMotionQuery.addListener(syncAnimation);
+  }
+  syncAnimation();
+});
+
 const projectCarousels = Array.from(document.querySelectorAll(".project-media"))
   .map((media) => {
     const slides = Array.from(media.children).filter(
